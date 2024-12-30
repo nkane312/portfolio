@@ -1,0 +1,28 @@
+{
+	"projects": [
+		{
+			"title": "Portfolio",
+			"description": "Next.js React portfolio site to house projects, contact methods, and a resume.",
+			"repository": "nkane312/portfolio",
+			"published": true,
+			"date": "2025-01-04",
+			"slug": "portfolio"
+		},
+		{
+			"title": "KNP Nutrition",
+			"description": "A React application website with static information and allows the user to email the owner directly via the contact form.",
+			"repository": "nkane312/knpnutrition",
+			"published": false,
+			"date": "2025-01-04",
+			"slug": "knpnutrition"
+		},
+		{
+			"title": "To Do App",
+			"description": "A stateful React to-do application that uses Context API to manage state as well as pulling data from SWAPI. Allows cycling through characters via the API and each has their own respective to-do lists.",
+			"repository": "nkane312/to-do-app",
+			"published": false,
+			"date": "2025-01-04",
+			"slug": "to-do-app"
+		}
+	]
+}
