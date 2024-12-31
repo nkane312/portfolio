@@ -1,22 +1,10 @@
 import Link from 'next/link';
 import React from 'react';
-// import { allProjects } from "contentlayer/generated";
 import data from '../content/projects/project-list.json';
 import { Navigation } from '../components/Navigation';
 import { Card } from '../components/Card';
-// import { Article } from './Article';
-// import { Redis } from '@upstash/redis';
 
-// const redis = Redis.fromEnv();
-
-// export const revalidate = 60;
 export default async function ProjectsPage() {
-	// const projectsDB = (
-	// 	await redis.mget<number[]>(...allProjects.map((p) => ['projects', p.slug].join(':')))
-	// ).reduce((acc, v, i) => {
-	// 	acc[allProjects[i].slug] = v ?? 0;
-	// 	return acc;
-	// }, {} as Record<string, number>);
 	const projects = [];
 	projects.push(data.projects);
 

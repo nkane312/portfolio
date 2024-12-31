@@ -4,20 +4,10 @@ import { Navigation } from '@/app/components/Navigation';
 import Image from 'next/image';
 import { Suspense } from 'react';
 
-// export const revalidate = 60;
-
 type Params = Promise<{ slug: string }>;
-
-// type Props = {
-// 	params: {
-// 		slug: string;
-// 	};
-// };
 
 export default async function PostPage({ params }: { params: Params }) {
 	const { slug } = await params;
-	// const slug = id.slug;
-	// const slug = params?.slug;
 
 	const projects = [];
 	projects.push(data.projects);
