@@ -6,6 +6,16 @@ import { Suspense } from 'react';
 
 type Params = Promise<{ slug: string }>;
 
+export async function generateStaticParams() {
+	const projects = [];
+	projects.push(data.projects);
+
+	const projectSlugs = projects[0].map((project) => {
+		return { slug: project.slug };
+	});
+	return projectSlugs;
+}
+
 export default async function PostPage({ params }: { params: Params }) {
 	const { slug } = await params;
 
@@ -52,7 +62,7 @@ export default async function PostPage({ params }: { params: Params }) {
 							width={800}
 							height={800}
 							alt={'Screenshot of ' + project.title}
-							src={'/images/' + project.slug + '.png'}
+							src={'/' + project.slug + '.png'}
 						/>
 					</div>
 				</Suspense>
