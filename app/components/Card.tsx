@@ -1,17 +1,13 @@
-"use client";
-import {
-	motion,
-	useMotionTemplate,
-	useSpring,
-} from "motion/react";
+'use client';
+import { motion, useMotionTemplate, useSpring } from 'motion/react';
 
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react';
 
 type onMouseMoveType = {
-    currentTarget: HTMLElement,
-    clientX: number,
-    clientY: number,
-}
+	currentTarget: HTMLElement;
+	clientX: number;
+	clientY: number;
+};
 
 export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 	const mouseX = useSpring(0, { stiffness: 500, damping: 100 });
@@ -31,13 +27,13 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 			className="overflow-hidden relative duration-700 border rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600 "
 		>
 			<div className="pointer-events-none">
-				<div className="absolute inset-0 z-0  transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
+				<div className="absolute inset-0 z-0  transition duration-150 [mask-image:linear-gradient(black,transparent)]" />
 				<motion.div
-					className="absolute inset-0 z-10  bg-gradient-to-br opacity-100  via-zinc-100/10  transition duration-1000 group-hover:opacity-50 "
+					className="absolute inset-0 z-10 lg:bg-gradient-to-tl opacity-100  via-zinc-100/10  transition duration-150 group-hover:opacity-50 "
 					style={style}
 				/>
 				<motion.div
-					className="absolute inset-0 z-10 opacity-0 mix-blend-overlay transition duration-1000 group-hover:opacity-100"
+					className="absolute inset-0 z-10 opacity-0 mix-blend-overlay transition duration-150 group-hover:opacity-100"
 					style={style}
 				/>
 			</div>

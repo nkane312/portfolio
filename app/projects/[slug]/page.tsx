@@ -44,6 +44,17 @@ export default async function PostPage({ params }: { params: Params }) {
 								<h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display">
 									{project.title}
 								</h1>
+								<p className="mt-6 text-lg leading-8 text-zinc-300">
+									{project.date ? (
+										<time dateTime={new Date(project.date).toISOString()}>
+											{Intl.DateTimeFormat(undefined, {
+												dateStyle: 'medium',
+											}).format(new Date(project.date))}
+										</time>
+									) : (
+										<span>Ongoing</span>
+									)}
+								</p>
 								<p className="mt-6 text-lg leading-8 text-zinc-300">{project.description}</p>
 							</div>
 

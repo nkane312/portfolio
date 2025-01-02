@@ -34,7 +34,7 @@ export default async function ProjectsPage() {
 													}).format(new Date(project.date))}
 												</time>
 											) : (
-												<span>SOON</span>
+												<span>Ongoing</span>
 											)}
 										</div>
 									</div>
@@ -45,7 +45,7 @@ export default async function ProjectsPage() {
 									>
 										{project.title}
 									</h2>
-									<p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300 mb-7">
+									<p className="mt-4 font-semibold leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300 mb-7">
 										{project.description}
 									</p>
 									<div className="absolute bottom-4 md:bottom-8">
@@ -57,13 +57,6 @@ export default async function ProjectsPage() {
 							</Link>
 						</Card>
 					))}
-					{/* <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-						{allProjects.map((project) => (
-							<Card key={project.slug}>
-								<Article project={project} />
-							</Card>
-						))}
-					</div> */}
 				</div>
 				<div className="hidden w-full h-px md:block bg-zinc-800" />
 			</main>
