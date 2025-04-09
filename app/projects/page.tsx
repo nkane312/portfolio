@@ -4,10 +4,7 @@ import data from '../content/projects/project-list.json';
 import { Navigation } from '../components/Navigation';
 import { Card } from '../components/Card';
 
-export default async function ProjectsPage() {
-	const projects = [];
-	projects.push(data.projects);
-
+export default function ProjectsPage() {
 	return (
 		<div className="relative pb-16">
 			<Navigation />
@@ -21,7 +18,7 @@ export default async function ProjectsPage() {
 				<div className="w-full h-px bg-zinc-800" />
 
 				<div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
-					{projects[0].map((project) => (
+					{data.projects.map((project) => (
 						<Card key={project.slug}>
 							<Link href={`/projects/${project.slug}`}>
 								<article className="relative w-full h-full p-4 md:p-8">

@@ -1,4 +1,3 @@
-// import type { Project } from '@/.contentlayer/generated';
 import Link from 'next/link';
 
 type Project = {

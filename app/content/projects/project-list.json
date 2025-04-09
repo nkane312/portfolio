@@ -1,6 +1,13 @@
 {
 	"projects": [
 		{
+			"title": "Recipe App",
+			"description": "A Vite application developed with a MERN stack (MongoDB for database management, Express and Node.jsfor the backend, React for the frontend).",
+			"repository": "nkane312/recipe-app",
+			"published": false,
+			"slug": "recipe-app"
+		},
+		{
 			"title": "KNP Nutrition",
 			"description": "A React application website with static information and allows the user to email the owner directly via the contact form.",
 			"repository": "nkane312/knpnutrition",
